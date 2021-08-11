@@ -1,0 +1,7 @@
+{
+  "generator-yolo": {
+    "project": "divinity_kinder",
+    "author": "Stephen Orioste",
+    "jsPreprocessor": "ES6(using babel)"
+  }
+}
