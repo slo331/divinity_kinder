@@ -1,0 +1,57 @@
+include ../../molecules/scroll-top/scroll-top
+
+mixin site-footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .site-footer(class=spec.__class)&attributes(attributes)
+    +scroll-top()
+    
+    .footer-top
+      .container
+        .row
+          .footer-wrap.col-md-3.col-sm-3.col-xs-12
+            .footer-content
+              .footer-logo
+                img(src='/assets/images/footer-logo.svg' title='Divinity Kindergarten' alt='Divinity Kindergarten' width='210' height='56')
+              .footer-text 
+                p Sed suscipit, libero ut auctor accumsan, ante diam fermentum elit, ut feugiat felis eros eget orci.
+              .footer-media
+                ul.media 
+                  li.media-item 
+                    a.item.whatsapp(href='#' target='_blank' aria-label='WhatsApp Divinity' rel='noopener')
+                      i.icon.icon-whatsapp
+                  li.media-item 
+                    a.item.facebook(href='#' target='_blank' aria-label='Divinity Facebook' rel='noopener')
+                      i.icon.icon-facebook
+                  li.media-item 
+                    a.item.email(href='#' target='_blank' aria-label='Email Divinity' rel='noopener')
+                      i.icon.icon-email
+          .footer-wrap.col-md-9.col-sm-9.col-xs-12
+            .quick-links
+              .links-wrap
+                h3.title Useful Links 
+                ul.links
+                  li.link-item 
+                    a(href='#' aria-label='Teaching Methods') Teaching Methods
+                  li.link-item 
+                    a(href='#' aria-label='Admission Handbook') Admission Handbook
+                  li.link-item 
+                    a(href='#' aria-label='Admission FAQs') Admission FAQs
+                  li.link-item 
+                    a(href='#' aria-label='Contact Us') Contact Us
+              .links-wrap
+                h3.title Contact Us
+                ul.links
+                  li.link-item 
+                    span 70 Ubi Crescent, #01-05 Ubi Techpark Singapore 408570
+                  li.link-item 
+                    span
+                      i.icon.icon-phone
+                    a(href='#') +65 6747 8568 
+
+    
+    .footer-bottom
+      .container 
+        .footer-copyright
+          span © 2021 Divinity Kindergarten, All Rights Reserved

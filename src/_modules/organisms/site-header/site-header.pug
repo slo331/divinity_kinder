@@ -1,0 +1,22 @@
+include ../../molecules/info-bar/info-bar
+include ../../molecules/site-nav/site-nav
+
+mixin site-header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .header(class=spec.__class)&attributes(attributes)
+    .menu-overlay
+    
+    +info-bar()
+    
+    .header-wrap
+      .container
+        .logo
+          a.logo-link(href='/' target='_self' title='Divinity Kindergarten')
+            img.logo-img(src='/assets/images/logo@4x.png' title='Divinity Kindergarten' alt='Divinity Kindergarten' width='205' height='65')
+        
+        +site-nav({
+					"navs": site.data.navigation.primaryNav
+				})
+    

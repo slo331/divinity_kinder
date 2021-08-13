@@ -1,0 +1,130 @@
+//site-footer styles 
+.site-footer {
+  position: relative;
+  width: 100%;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .footer {
+    &-top {
+      background: $darkPurple;
+      padding: 4rem 0;
+
+      .footer {
+        &-text {
+          display: block;
+          font-size: calc-em(14px);
+          margin: 20px 0;
+        }
+
+        &-media {
+          .media {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &-item {
+              margin: 0 5px 0;
+
+              &:first-child {
+                margin: 0 5px 0 0;
+              }
+
+              &:last-child {
+                margin: 0 0 0 5px;
+              }
+
+              .item {
+                background: $grey2;
+                padding: 13px;
+                border-radius: 50%;
+                line-height: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.whatsapp {
+                  background: $whatsapp;
+                }
+
+                &.facebook {
+                  background: $facebook;
+                }
+
+                &.email {
+                  background: $pink;
+                }
+
+                &:hover {
+                  background: $peach;
+                }
+
+                .icon {
+                  font-size: calc-em(18px);
+                } 
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      background: $purple;
+      padding: 1rem 0;
+
+      .footer {
+        &-copyright {
+          width: 100%;
+          text-align: center;
+          font-size: calc-em(14px);
+          font-weight: $semibold;
+        }
+      }
+    }
+
+    &-wrap {
+      .quick-links {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 0 0 6rem;
+
+        .links-wrap {
+          width: 33.333%;
+          // padding: 0 5px 0 0;
+          // margin: 0 3rem;
+          // flex: 1;
+
+          .title {
+            margin: 0 0 1rem;
+            font-family: $secondaryFont;
+            font-size: calc-em(30px);
+          }
+
+          .links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            .link-item {
+              font-size: calc-em(16px);
+              font-weight: $semibold;
+              margin: 10px 0;
+
+              .icon {
+                margin: 0 10px 0 0;
+                font-size: calc-em(14px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

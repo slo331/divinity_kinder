@@ -1,0 +1,74 @@
+//info-bar styles 
+.info-bar {
+  background: $pink;
+
+  &_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+
+    .info-col {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+
+      .cta-content {
+        width: auto;
+        color: $white;
+        display: flex;
+        align-items: center;
+
+        & + .cta-content {
+          margin: 0 0 0 20px;
+        }
+
+        .icon {
+          font-size: calc-em(16px);
+          margin: 0 5px 0 0;
+        }
+
+        .desc {
+          font-size: calc-em(15px);
+          font-weight: $bold;
+          line-height: 1;
+        }
+      }
+
+      .social-media {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        .media {
+          margin: 0 5px;
+
+          &:last-child {
+            margin: 0 0 0 5px;
+          }
+
+          a {
+            line-height: 1;
+
+            .icon {
+              font-size: calc-em(22px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $purple2;
+    }
+  }
+}

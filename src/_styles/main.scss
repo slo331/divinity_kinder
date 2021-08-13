@@ -1,25 +1,52 @@
 //Normalize styles
 @import '../../node_modules/normalize.css/normalize';
 
+@import "./_mixins";
+@import "./_variables";
+@import "./_styles";
 @import "./_fonts";
 
-body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+//Icomoon
+@import "../_icomoon/variables";
+@import "../_icomoon/style";
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.yolo-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  .logo {
-    width: 100px;
-    height: auto;
-    margin: 0 auto;
+html {
+  font-size: $base-fontsize;
+}
+
+body {
+  font-family: $primaryFont;
+  margin: 0;
+  padding: 0;
+  color: $grey1;
+  line-height: $base-lineheight;
+
+  a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+  }
+  
+  header {
+    display: block;
+    width: 100%;
+    position: fixed;
+  }
+
+  main {
+    background: $grey2;
+    min-height: 20vh;
   }
 }
 
-@import "../_modules/button/button";
+@import "../_modules/molecules/info-bar/info-bar";
+@import "../_modules/molecules/site-nav/site-nav";
+@import "../_modules/organisms/site-header/site-header";
+@import "../_modules/organisms/site-footer/site-footer";

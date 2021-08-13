@@ -1,0 +1,17 @@
+mixin site-nav(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.nav-wrap(class=spec.__class)&attributes(attributes)
+		.nav-mobile.mobile-only
+			.nav-menu
+				.hamburger-menu
+					.nav-line.l1
+					.nav-line.l2
+					.nav-line.l3
+		nav.nav-links
+			.nav-links__wrap
+				ul.links
+					each item, index in spec.navs
+						li.links-item(class=(page === item.page ? 'active' : ''))
+							a(href= item.url)= item.name

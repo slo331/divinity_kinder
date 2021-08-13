@@ -1,0 +1,23 @@
+mixin info-bar(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .info-bar(class=spec.__class)&attributes(attributes)
+    .container
+      .info-bar_wrap
+        .info-col.info-cta
+          .cta-content 
+            i.icon.icon-pin 
+            span.desc 70 Ubi Cres, #01-05, Singapore 408570
+          .cta-content 
+            i.icon.icon-email 
+            span.desc
+              a(href='mailto:admin@divinity-kindergarten.com') admin@divinity-kindergarten.com
+        .info-col.info-smedia
+          ul.social-media 
+            li.media
+              a(href='#' target='_blank' aria-label='WhatsApp Divinity' rel='noopener')
+                i.icon.icon-whatsapp
+            li.media
+              a(href='#' target='_blank' aria-label='Facebook Divinity' rel='noopener')
+                i.icon.icon-fb-circle

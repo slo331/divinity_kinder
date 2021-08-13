@@ -1,0 +1,34 @@
+{
+  "primaryNav": [
+    {
+      "name": "Home",
+      "url": "/",
+      "page": "homepage"
+    },
+    {
+      "name": "About Us",
+      "url": "/",
+      "page": "about-us"
+    },
+    {
+      "name": "Classes",
+      "url": "/",
+      "page": "classes"
+    },
+    {
+      "name": "Faculty",
+      "url": "/",
+      "page": "faculty"
+    },
+    {
+      "name": "School Life",
+      "url": "/",
+      "page": "school-life"
+    },
+    {
+      "name": "Admission",
+      "url": "/",
+      "page": "admission"
+    }
+  ]
+}
