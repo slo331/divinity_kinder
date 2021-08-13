@@ -1,0 +1,120 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sxn6jd');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sxn6jd#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sxn6jd') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sxn6jd') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sxn6jd##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pin {
+  &:before {
+    content: $icon-pin; 
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-down; 
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content: $icon-chevron-up; 
+  }
+}
+.icon-long-arrow {
+  &:before {
+    content: $icon-long-arrow; 
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-wa-circle {
+  &:before {
+    content: $icon-wa-circle; 
+  }
+}
+.icon-em-circle {
+  &:before {
+    content: $icon-em-circle; 
+  }
+}
+.icon-fb-circle {
+  &:before {
+    content: $icon-fb-circle; 
+  }
+}
+.icon-quote-open {
+  &:before {
+    content: $icon-quote-open; 
+  }
+}
+.icon-quote-close {
+  &:before {
+    content: $icon-quote-close; 
+  }
+}
+.icon-curriculum {
+  &:before {
+    content: $icon-curriculum; 
+  }
+}
+.icon-programmes {
+  &:before {
+    content: $icon-programmes; 
+  }
+}
+.icon-admission {
+  &:before {
+    content: $icon-admission; 
+  }
+}
+
