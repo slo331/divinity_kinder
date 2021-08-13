@@ -11,7 +11,11 @@
   .footer {
     &-top {
       background: $darkPurple;
-      padding: 4rem 0;
+      padding: 30px 0;
+
+      @include desktop {
+        padding: 4rem 0;
+      }
 
       .footer {
         &-text {
@@ -89,17 +93,49 @@
     }
 
     &-wrap {
+      margin: 0 0 30px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      @include desktop {
+        margin: 0;
+      }
+
       .quick-links {
         width: 100%;
-        display: flex;
-        align-items: flex-start;
-        padding: 0 0 0 6rem;
+        display: block;
+        padding: 0;
+
+        @include tablet {
+          display: flex;
+          align-items: flex-start;
+        }
+
+        @include desktop {
+          padding: 0 0 0 6rem;
+          display: flex;
+          align-items: flex-start;
+        }
 
         .links-wrap {
-          width: 33.333%;
-          // padding: 0 5px 0 0;
-          // margin: 0 3rem;
-          // flex: 1;
+          width: 100%;
+          margin: 0 0 30px;
+
+          &:last-child {
+            margin: 0;
+          }
+          
+          @include tablet {
+            width: auto;
+            margin: 0 3rem 0 0;
+          }
+          
+          @include desktop {
+            width: 33.333%;
+            margin: 0;
+          }
 
           .title {
             margin: 0 0 1rem;

@@ -14,6 +14,10 @@
       display: flex;
       align-items: center;
 
+      &.info-smedia {
+        width: 20%;
+      }
+
       .cta-content {
         width: auto;
         color: $white;
