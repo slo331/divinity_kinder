@@ -1,6 +1,34 @@
 @font-face {
 	font-family: 'Baloo';
 	font-style: normal;
+	src: url('/assets/fonts/baloosemibold.eot');
+	src: url('/assets/fonts/baloosemibold.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/baloosemibold.woff2') format('woff2'),
+			 url('/assets/fonts/baloosemibold.woff') format('woff'),
+			 url('/assets/fonts/baloosemibold.ttf') format('truetype'),
+			 url('/assets/fonts/baloosemibold.svg#baloo_2extrabold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Baloo';
+	font-style: normal;
+	src: url('/assets/fonts/baloobold.eot');
+	src: url('/assets/fonts/baloobold.eot?#iefix') format('embedded-opentype'),
+			 url('/assets/fonts/baloobold.woff2') format('woff2'),
+			 url('/assets/fonts/baloobold.woff') format('woff'),
+			 url('/assets/fonts/baloobold.ttf') format('truetype'),
+			 url('/assets/fonts/baloobold.svg#baloo_2extrabold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Baloo';
+	font-style: normal;
 	src: url('/assets/fonts/baloo.eot');
 	src: url('/assets/fonts/baloo.eot?#iefix') format('embedded-opentype'),
 			 url('/assets/fonts/baloo.woff2') format('woff2'),
