@@ -18,9 +18,23 @@
       }
 
       .footer {
+        &-logo {
+          width: 175px;
+          height: auto;
+
+          @include desktop {
+            width: 210px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
         &-text {
           display: block;
-          font-size: calc-em(14px);
+          font-size: calc-em(15px);
           margin: 20px 0;
         }
 
@@ -86,7 +100,8 @@
         &-copyright {
           width: 100%;
           text-align: center;
-          font-size: calc-em(14px);
+          font-size: calc-em(15px);
+          font-family: $secondaryFont;
           font-weight: $semibold;
         }
       }
@@ -114,9 +129,13 @@
         }
 
         @include desktop {
-          padding: 0 0 0 6rem;
+          padding: 0 0 0 2rem;
           display: flex;
           align-items: flex-start;
+        }
+
+        @include lgDesktop {
+          padding: 0 0 0 6rem;
         }
 
         .links-wrap {
@@ -149,6 +168,7 @@
             padding: 0;
 
             .link-item {
+              font-family: $secondaryFont;
               font-size: calc-em(16px);
               font-weight: $semibold;
               margin: 10px 0;
@@ -156,6 +176,12 @@
               .icon {
                 margin: 0 10px 0 0;
                 font-size: calc-em(14px);
+              }
+
+              a {
+                &:hover {
+                  color: $pink;
+                }
               }
             }
           }

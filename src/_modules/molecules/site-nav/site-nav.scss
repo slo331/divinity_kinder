@@ -7,6 +7,73 @@
     width: 100%;
     padding: 0 0 0 2rem;
 
+    #{$p}-mobile {
+      position: relative;
+      z-index: 3;
+
+      @include tablet {
+        display: inline-block;
+      }
+
+      #{$p}-menu {
+        .hamburger-menu {
+          position: relative;
+          width: 30px;
+          height: 20px;
+          cursor: pointer;
+
+          &.active {
+            #{$p}-line {
+              background: $purple;
+              transition: all .5s ease-in-out;
+
+              &.l1, &.l3 {
+                top: 8px;
+              }
+
+              &.l2 {
+                display: none;
+              }
+            }
+
+            &.rotate {
+              .l1 {
+                transform: rotate(45deg);
+              }
+
+              .l3 {
+                width: 100%;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+
+          #{$p}-line {
+            width: 30px;
+            height: 3px;
+            border-radius: 4px;
+            background: $red;
+            transition: all .4s linear;
+            position: absolute;
+            left: 0;
+
+            &.l1 {
+              top: 0;
+            }
+
+            &.l2 {
+              display: block;
+              top: 8px;
+            }
+
+            &.l3 {
+              top: 16px;
+            }
+          }
+        }
+      }
+    }
+
     #{$p}-links {   
       display: flex;
       height: 100%;
