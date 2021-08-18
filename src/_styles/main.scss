@@ -1,5 +1,6 @@
 //Normalize styles
 @import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/slick-carousel/slick/slick';
 
 @import "./_mixins";
 @import "./_variables";
@@ -29,6 +30,19 @@ body {
   color: $grey1;
   line-height: $base-lineheight;
 
+  &.fixed {
+    overflow-y: hidden;
+  }
+
+  // .full-width {
+  //   width: 100vw;
+  //   position: relative;
+  //   left: 50%;
+  //   right: 50%;
+  //   margin-left: -50vw;
+  //   margin-right: -50vw;
+  // }
+
   a {
     text-decoration: none;
     transition: all .3s ease-in-out;
@@ -38,15 +52,22 @@ body {
     display: block;
     width: 100%;
     position: fixed;
+    z-index: 10;
   }
 
   main {
-    background: $grey2;
+    // background: $grey2;
     min-height: 20vh;
+    // padding: 190px 0 0 0;
   }
 }
 
+@import "../_modules/atoms/button/button";
+@import "../_modules/atoms/feature-card/feature-card";
 @import "../_modules/molecules/info-bar/info-bar";
 @import "../_modules/molecules/site-nav/site-nav";
 @import "../_modules/organisms/site-header/site-header";
+@import "../_modules/organisms/carousel-banner/carousel-banner";
+@import "../_modules/organisms/welcome/welcome";
+@import "../_modules/organisms/features/features";
 @import "../_modules/organisms/site-footer/site-footer";

@@ -1,0 +1,17 @@
+mixin feature-card(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .card(class=spec.__class)&attributes(attributes)
+    .card-img
+      img(src=spec.img alt=spec.title title=spec.title width="480" height="425")
+    .card-content 
+      .card-icon 
+        .icon(class=spec.icon)
+      .card-title
+        .title=spec.title 
+      .card-desc
+        .desc=spec.desc
+        .cta-link
+          a(href=spec.link) more
+          i.icon.icon-long-arrow

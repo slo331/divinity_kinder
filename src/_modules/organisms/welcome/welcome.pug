@@ -1,0 +1,15 @@
+mixin welcome(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.welcome(class=spec.__class)&attributes(attributes)
+    .container
+      .welcome-wrap
+        .welcome-img.left
+          img(src='/assets/images/girl_jumping.svg' alt='Girl Jumping' title='Girl Jumping' width='99' height='130')
+        .welcome-text
+          .title= spec.title
+          .desc= spec.desc
+        .welcome-img.right
+          img(src='assets/images/boy_running.svg' alt='Boy Running' title='Boy Running' width='103' height='127')
+

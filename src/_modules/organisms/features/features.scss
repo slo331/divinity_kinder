@@ -1,0 +1,26 @@
+//features styles 
+.features {
+  $p: &;
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &-wrap {
+    display: block;
+    width: 100%;
+
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .feature-card {
+      width: 100%;
+      
+      @include desktop {
+        width: 33.333%;
+      }
+    }
+  }
+}

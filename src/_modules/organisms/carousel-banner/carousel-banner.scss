@@ -1,0 +1,224 @@
+//carousel-banner styles 
+.carousel {
+  $p:&;
+
+  &-home {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      height: 500px;
+    }
+
+    @include desktop {
+      height: 750px;
+    }
+
+    #{$p}-dots {
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
+      z-index: 2;
+
+      .slick-dots {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        li {
+          margin: 0 3px;
+          width: 20px;
+          height: 20px;
+
+          button {
+            border: 3px solid $white;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            padding: 7px;
+            text-indent: -99999px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+          }
+
+          &.slick-active,
+          &:hover {
+            button {
+              background: $purple
+            }
+          }
+        }
+      }
+    }
+
+    #{$p}-arrows {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(50%);
+      z-index: 2;
+
+      @include mobile {
+        display: none;
+      }
+
+      .prev, .next {
+        padding: 10px;
+        font-size: calc-em(18px);
+        font-weight: $bold;
+        line-height: 1;
+        color: $pink;
+        background: $white;
+        border-radius: 6px;
+        box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+        position: absolute;
+        cursor: pointer;
+        transition: all .2s linear;
+
+        &:hover, &:focus {
+          background: $pink;
+          color: $white;
+          box-shadow: 0px 0px 0px 7px rgba(255,140,140,0.3);
+        }
+      }
+
+      .prev {
+        left: 20px;
+
+        @include desktop {
+          left: 40px;
+        }
+      }
+
+      .next {
+        right: 20px;
+
+        @include desktop {
+          right: 40px;
+        }
+      }
+    }
+
+    #{$p}-wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      #{$p}-item {
+        #{$p}-item__wrap {
+          position: relative;
+          
+          #{$p}-img {
+            height: 85vh;
+
+            @include tablet {
+              height: 500px;
+            }
+
+            @include desktop {
+              height: 750px;
+            }
+
+            .mobile-only {
+              display: none;
+
+              @include mobile {
+                display: block;
+              }
+            }
+
+            .desktop-only {
+              display: none;
+
+              @include tablet {
+                display: block;
+              }
+
+              @include desktop {
+                display: block;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center center;
+            }
+          }
+
+          #{$p}-info {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+            bottom: 5rem;
+
+            @include tablet {
+              left: 0;
+              padding: 0 0 0 80px;
+            }
+
+            @include desktop {
+              padding: 138px 0 0;
+              top: 50%;
+              bottom: unset;
+              transform: translateY(-50%);
+            }
+
+            .info {
+              width: 100%;
+
+              @include tablet {
+                width: 60%;
+              }
+
+              @include desktop {
+                width: 50%;
+                margin: 0 0 0 100px;
+              }
+
+              @include lgDesktop {
+                width: 40%;
+                margin: 0;
+                margin: 0 0 0 60px;
+              }
+
+              &-title {
+                font-family: $secondaryFont;
+                font-weight: $heavy;
+                font-size: calc-em(36px);
+                line-height: 1;
+                margin: 0 0 1rem;
+
+                @include desktop {
+                  font-size: calc-em(64px);
+                  margin: 0 0 1.5rem;
+                }
+              }
+
+              &-desc {
+                margin: 0 0 1.5rem;
+                font-size: calc-em(16px);
+                font-weight: $normal;
+
+                @include desktop {
+                  font-size: calc-em(18px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

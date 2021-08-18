@@ -8,7 +8,7 @@ mixin site-header(spec)
   .header(class=spec.__class)&attributes(attributes)
     .menu-overlay
     
-    +info-bar()
+    +info-bar().desktop-only
     
     .header-wrap
       .container
@@ -19,4 +19,3 @@ mixin site-header(spec)
         +site-nav({
 					"navs": site.data.navigation.primaryNav
 				})
-    

@@ -1,3 +1,5 @@
+include ../../molecules/info-bar/info-bar
+
 mixin site-nav(spec)
 	- spec = spec || {}
 	- spec.__class = spec.__class || ''
@@ -15,3 +17,5 @@ mixin site-nav(spec)
 					each item, index in spec.navs
 						li.links-item(class=(page === item.page ? 'active' : ''))
 							a(href= item.url)= item.name
+		
+			+info-bar().mobile-only

@@ -1,0 +1,18 @@
+include ../../atoms/feature-card/feature-card
+
+mixin features(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.features = spec.features || ''
+
+  section.features(class=spec.__class)&attributes(attributes)
+    .features-wrap 
+      each feat, index in spec.features
+        .feature-card
+          +feature-card({
+            'img': feat.img,
+            'icon': feat.icon,
+            'title': feat.title,
+            'desc': feat.desc,
+            'link': feat.link
+          })
