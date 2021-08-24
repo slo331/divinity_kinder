@@ -1,0 +1,29 @@
+extends ../_layouts/base
+
+include ../_modules/molecules/page-banner/page-banner
+include ../_modules/molecules/post-content/post-content
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../'
+	- isHome = false
+	- var pageTitle = 'About Us'
+	- var page = 'about-us'
+	- var site = htmlWebpackPlugin.options //global site data
+
+block content
+	+page-banner({
+		'img': '/assets/images/about-title-img.jpg',
+		'title': 'About Us',
+		'breadcrumb': {
+			'level1': 'About Us'
+		}
+	})
+
+	section.content-wrap 
+		.container
+			+post-content()
+				h3 Engaging Learning Environment
+				p.h7.pink Your child will develop self-esteem, independence and language
+
+				p Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.

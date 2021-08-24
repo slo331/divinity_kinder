@@ -1,0 +1,7 @@
+mixin post-content(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  .post-content(class=spec.__class)&attributes(attributes)
+    if block 
+      block

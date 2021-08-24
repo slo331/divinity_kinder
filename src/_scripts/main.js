@@ -6,6 +6,7 @@ import $ from 'jquery';
 // Import Modules
 import SiteNav from '../_modules/molecules/site-nav/site-nav';
 import CarouselBanner from '../_modules/organisms/carousel-banner/carousel-banner';
+import Testimonials from '../_modules/organisms/testimonials/testimonials';
 
 $(() => {
   let config = {
@@ -22,6 +23,10 @@ $(() => {
 
   if($('.carousel-home').length) {
     new CarouselBanner();
+  }
+
+  if($('.testimonials').length) {
+    new Testimonials();
   }
 });
 

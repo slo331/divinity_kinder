@@ -3,6 +3,7 @@ extends _layouts/base
 include ./_modules/organisms/carousel-banner/carousel-banner
 include ./_modules/organisms/welcome/welcome
 include ./_modules/organisms/features/features
+include ./_modules/organisms/testimonials/testimonials
 
 block config
 	- isHome = true
@@ -27,8 +28,8 @@ block content
 				'desc': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ultrices lobortis. Sed in ligula varius, porttitor tortor sit amet, ultricies ipsum',
 				'btnTitle': 'learn more',
 				'btnURL': '#',
-				'imgDk': '/assets/images/homebanner_img_1.png',
-				'imgMb': '/assets/images/homebanner_img_1.png',
+				'imgDk': '/assets/images/homebanner_img_2.png',
+				'imgMb': '/assets/images/homebanner_img_2_mobile.png',
 				'imgTitle': 'Carousel Img 2'
 			} 
 		],
@@ -65,4 +66,20 @@ block content
 				'link': '#'
 			}
 		]
+	})
+
+	+testimonials({
+		'testimonials': [
+			{
+				'quoute': '1 Nullam non elit at lacus scelerisque congue. Maecenas erat sapien, consequat at diam ac, placerat ultricies orci. Sed suscipit, libero ut auctor accumsan, ante diam fermentum elit, ut feugiat felis eros eget orci. Aliquam vitae feugiat ante. Vivamus ullamcorper, sem quis vehicula rhoncus, nulla turpis mollis sapien, eget rutrum libero erat nec orci.'
+			},
+			{
+				'quoute': '2 Nullam non elit at lacus scelerisque congue. Maecenas erat sapien, consequat at diam ac, placerat ultricies orci. Sed suscipit, libero ut auctor accumsan, ante diam fermentum elit, ut feugiat felis eros eget orci. Aliquam vitae feugiat ante. Vivamus ullamcorper, sem quis vehicula rhoncus, nulla turpis mollis sapien, eget rutrum libero erat nec orci, lorem ipsum dolor sit amet senin diam fermentum elit, ut feugiat felis eros.'
+			},
+			{
+				'quoute': '3 Nullam non elit at lacus scelerisque congue. Maecenas erat sapien, consequat at diam ac, placerat ultricies orci. Sed suscipit, libero ut auctor accumsan, ante diam fermentum elit, ut feugiat felis eros eget orci. Aliquam vitae feugiat ante. Vivamus ullamcorper, sem quis vehicula rhoncus, nulla turpis mollis sapien, eget rutrum libero erat nec orci.'
+			}
+		],
+		'auto': 'false',
+		'speed': '3000'
 	})

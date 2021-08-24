@@ -1,0 +1,15 @@
+include ../../molecules/breadcrumb/breadcrumb
+
+mixin page-banner(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.page-banner(class=spec.__class)&attributes(attributes)
+    .banner-image.parallax-bg(style='background-image: url(' + spec.img + ')')
+      img(itemprop='image' src=spec.img alt=spec.title title=spec.title width='1900' height='400')
+    .banner-title 
+      .container
+        .title-wrap 
+          .title=spec.title 
+          //- h4.subtitle=spec.subtitle
+          +breadcrumb(spec.breadcrumb)

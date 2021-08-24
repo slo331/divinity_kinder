@@ -161,7 +161,7 @@
             width: 100%;
             height: auto;
             z-index: 1;
-            bottom: 5rem;
+            bottom: 3rem;
 
             @include tablet {
               left: 0;
@@ -201,12 +201,13 @@
                 margin: 0 0 1rem;
 
                 @include desktop {
-                  font-size: calc-em(64px);
+                  font-size: calc-em(65px);
                   margin: 0 0 1.5rem;
                 }
               }
 
               &-desc {
+                display: block;
                 margin: 0 0 1.5rem;
                 font-size: calc-em(16px);
                 font-weight: $normal;

@@ -9,6 +9,10 @@ export default class CarouselBanner {
     let $carousel = $('.carousel-wrap', $carouselHome);
     let $autoPlay = $carouselHome.data('auto');
     let $speed = $carouselHome.data('speed');
+    let $dots = $('.carousel-dots', $carouselHome);
+    let $arrows = $('.carousel-arrows', $carouselHome);
+    let $prev = $('.prev', $arrows);
+    let $next = $('.next', $arrows)
 
     $carousel.slick({
       speed: 800,
@@ -21,10 +25,10 @@ export default class CarouselBanner {
       dots: true,
       arrows: true,
       mobileFirst: true,
-      appendDots: $('.carousel-dots'),
-      appendArrows: $('.carousel-arrows'),
-      prevArrow: $('.carousel-arrows .prev'),
-      nextArrow: $('.carousel-arrows .next')
+      appendDots: $dots,
+      appendArrows: $arrows,
+      prevArrow: $prev,
+      nextArrow: $next
     });
   }
 }

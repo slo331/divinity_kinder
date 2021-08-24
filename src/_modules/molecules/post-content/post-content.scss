@@ -1,0 +1,23 @@
+//post-content styles 
+.post-content {
+  position: relative;
+
+  .h7 {
+    color: $grey2;
+    font-size: calc-em(18px);
+    font-weight: $heavy;
+    margin: 8px 0 20px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .red {
+    color: $red;
+  }
+
+  .pink {
+    color: $pink;
+  }
+}

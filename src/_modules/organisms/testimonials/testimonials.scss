@@ -1,0 +1,198 @@
+//testimonials styles 
+.testimonials {
+  $p: &;
+  padding: 5rem 0;
+  background: url('/assets/images/testimonial_bg@4x.png') no-repeat;
+  background-size: cover;
+
+  &-header {
+    display: block;
+    width: 100%;
+
+    .title {
+      font-family: $secondaryFont;
+      font-size: calc-em(30px);
+      font-weight: $bold;
+      line-height: 1.1;
+      color: $grey2;
+      text-align: center;
+
+      @include desktop {
+        font-size: calc-em(44px);
+      }
+    }
+  }
+
+  &-text {
+    display: block;
+
+    .carousel {
+      &-wrap {
+        position: relative;
+        margin: 1rem 0;
+
+        .carousel {
+          &-item {
+            padding: 0 20px;
+
+            @include desktop {
+              padding: 0 4rem;
+            }
+
+            @include lgDesktop {
+              padding: 0 15rem;
+            }
+
+            &__wrap {
+              .carousel-text {
+                .quote {
+                  &-wrap {
+                    position: relative;
+                    
+                    .quote-icon {
+                      position: absolute;
+                      z-index: -1;
+
+                      &.open {
+                        top: -5px;
+                        left: -20px;
+                      }
+
+                      &.close {
+                        bottom: -5px;
+                        right: -20px;
+                      }
+
+                      .icon {
+                        color: $red;
+                        opacity: 0.3;
+                        font-size: calc-em(50px);
+                      }
+                    }
+
+                    .quote-text {
+                      p {
+                        text-align: center;
+                        font-style: italic;
+                        font-size: calc-em(16px);
+
+                        @include desktop {
+                          font-size: calc-em(18px);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-dots {
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        z-index: 2;
+
+        @include desktop {
+          bottom: 0;
+        }
+  
+        .slick-dots {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+  
+          li {
+            margin: 0 3px;
+            width: 20px;
+            height: 20px;
+
+            @include desktop {
+              width: 14px;
+              height: 14px;
+            }
+  
+            button {
+              border: 3px solid $white;
+              background: rgba(138, 138, 138, 0.8);
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              padding: 8px;
+              text-indent: -99999px;
+              cursor: pointer;
+              transition: all .2s ease-in-out;
+
+              @include desktop {
+                width: 14px;
+                height: 14px;
+                padding: 7px;
+              }
+            }
+  
+            &.slick-active,
+            &:hover {
+              button {
+                background: $pink
+              }
+            }
+          }
+        }
+      }
+
+      &-arrows {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(50%);
+        z-index: 2;
+  
+        @include mobile {
+          display: none;
+        }
+  
+        .prev, .next {
+          padding: 8px;
+          font-size: calc-em(16px);
+          font-weight: $bold;
+          line-height: 1;
+          color: $white;
+          background: $pink;
+          border-radius: 6px;
+          position: absolute;
+          cursor: pointer;
+          transition: all .2s linear;
+  
+          &:hover, &:focus {
+            background: $purple;
+            color: $white;
+            box-shadow: 0px 0px 0px 7px rgba(140,90,180,0.3);
+          }
+        }
+  
+        .prev {
+          left: 20px;
+  
+          @include desktop {
+            left: 40px;
+          }
+        }
+  
+        .next {
+          right: 20px;
+  
+          @include desktop {
+            right: 40px;
+          }
+        }
+      }
+    }
+  }
+}

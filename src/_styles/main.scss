@@ -47,6 +47,32 @@ body {
     text-decoration: none;
     transition: all .3s ease-in-out;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: $heavy;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: calc-em(60px);
+  }
+
+  h2 {
+    font-size: calc-em(48px);
+  }
+
+  h3 {
+    font-size: calc-em(38px);
+  }
+
+  h4 {
+    font-size: calc-em(18px);
+  }
+
+  p {
+    font-size: calc-em(18px);
+  }
   
   header {
     display: block;
@@ -56,9 +82,9 @@ body {
   }
 
   main {
-    // background: $grey2;
-    min-height: 20vh;
-    // padding: 190px 0 0 0;
+    .content-wrap {
+      padding: 5rem 0;
+    }
   }
 }
 
@@ -66,8 +92,12 @@ body {
 @import "../_modules/atoms/feature-card/feature-card";
 @import "../_modules/molecules/info-bar/info-bar";
 @import "../_modules/molecules/site-nav/site-nav";
+@import "../_modules/molecules/page-banner/page-banner";
+@import "../_modules/molecules/breadcrumb/breadcrumb";
+@import "../_modules/molecules/post-content/post-content";
 @import "../_modules/organisms/site-header/site-header";
 @import "../_modules/organisms/carousel-banner/carousel-banner";
 @import "../_modules/organisms/welcome/welcome";
 @import "../_modules/organisms/features/features";
+@import "../_modules/organisms/testimonials/testimonials";
 @import "../_modules/organisms/site-footer/site-footer";

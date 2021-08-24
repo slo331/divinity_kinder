@@ -1,0 +1,28 @@
+mixin testimonials(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.testimonials(class=spec.__class data-auto=spec.auto data-speed=spec.speed)&attributes(attributes)
+    .container 
+      .testimonials-header
+        .title Parents' Testimonials 
+      .testimonials-text 
+        .carousel-wrap
+          each text, index in spec.testimonials 
+            .carousel-item(data-index=(index + 1))
+              .carousel-item__wrap 
+                .carousel-text 
+                  .quote-wrap 
+                    .quote-icon.open
+                      i.icon.icon-quote-open
+                    .quote-text
+                      p= text.quoute
+                    .quote-icon.close
+                      i.icon.icon-quote-close
+        
+        .carousel-dots
+    
+        .carousel-arrows
+          i.icon.prev.icon-chevron-left
+          i.icon.next.icon-chevron-right
+

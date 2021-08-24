@@ -17,10 +17,6 @@
 
     .feature-card {
       width: 100%;
-      
-      @include desktop {
-        width: 33.333%;
-      }
     }
   }
 }

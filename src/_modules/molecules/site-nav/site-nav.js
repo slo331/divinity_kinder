@@ -6,6 +6,7 @@ import enquire from 'enquire.js';
 export default class SiteNav {
   constructor(config) {
     this.config = config;
+    let $header = $('.header');
     let $navLinks = $('.nav-links');
     
     // Mobile menu
@@ -21,6 +22,7 @@ export default class SiteNav {
           
           if(!$navLinks.hasClass('expanded')) {
             let $showMenu = () => {
+              $header.addClass('expanded');
               $mobileMenu.addClass('active');
               $navLinks.addClass('expanded');
               $overlay.fadeIn('slow');
@@ -53,9 +55,11 @@ export default class SiteNav {
                 $navLinks.removeClass('expanded');
                 $navLinks.slideUp('slow');
               }, 500);
-            })
-            .done(() => {
-              $overlay.removeClass('active').fadeOut('slow');
+
+              setTimeout(() => {
+                $header.removeClass('expanded');
+                $overlay.removeClass('active').fadeOut('slow');
+              }, 500);
             });
           }
         });
