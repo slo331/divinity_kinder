@@ -5,7 +5,7 @@ mixin site-footer(spec)
   - spec.__class = spec.__class || ''
 
   .site-footer(class=spec.__class)&attributes(attributes)
-    //- +scroll-top()
+    +scroll-top()
     
     .footer-top
       .container

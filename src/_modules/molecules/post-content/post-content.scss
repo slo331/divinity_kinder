@@ -24,4 +24,24 @@
   .pink {
     color: $pink;
   }
+
+  .block-columns {
+    display: block;
+
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 0 -20px;
+    }
+
+    .block-column {
+      width: 100%;
+      
+      @include desktop {
+        width: 50%;
+        padding: 0 20px;
+      }
+    }
+  }
 }

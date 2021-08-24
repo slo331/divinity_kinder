@@ -1,0 +1,13 @@
+mixin accordion(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.accLvl1 = spec.accLvl1 || ''
+
+  .accordion(class=spec.__class)&attributes(attributes)
+    ul.accordion-list
+      each item, index in spec.accLvl1
+        li.accordion-item.accordion-parent(data-accordion=item.accName)
+          .accordion-label.label-title
+            p= item.accLabel
+            i.icon.icon-chevron-right
+          .accordion-content.content-wrap!= item.accContent

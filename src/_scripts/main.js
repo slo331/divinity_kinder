@@ -5,6 +5,8 @@ import $ from 'jquery';
 
 // Import Modules
 import SiteNav from '../_modules/molecules/site-nav/site-nav';
+import ScrollTop from '../_modules/molecules/scroll-top/scroll-top';
+import Accordion from '../_modules/molecules/accordion/accordion';
 import CarouselBanner from '../_modules/organisms/carousel-banner/carousel-banner';
 import Testimonials from '../_modules/organisms/testimonials/testimonials';
 
@@ -27,6 +29,14 @@ $(() => {
 
   if($('.testimonials').length) {
     new Testimonials();
+  }
+
+  if($('.scroll-top').length) {
+    new ScrollTop();
+  }
+
+  if($('.accordion').length) {
+    new Accordion();
   }
 });
 

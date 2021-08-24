@@ -2,6 +2,7 @@ extends ../_layouts/base
 
 include ../_modules/molecules/page-banner/page-banner
 include ../_modules/molecules/post-content/post-content
+include ../_modules/molecules/accordion/accordion
 
 block config
 	//- Correct base url pathing for this page
@@ -23,15 +24,53 @@ block content
 	section.content-wrap 
 		.container
 			+post-content()
-				h2 Engaging Learning Environment
-				p.h7.pink Your child will develop self-esteem, independence and language
+				.block-columns
+					.block-column
 
-				p Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+					.block-column
+						h2 Engaging Learning Environment
+						p.h7.pink Your child will develop self-esteem, independence and language
+
+						p Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
 	
-	section.content-wrap.bg-purple
+	section.content-wrap.bg-pink
 		.container
 			+post-content()
-				h2 Engaging Learning Environment
-				p.h7.pink Your child will develop self-esteem, independence and language
+				.block-columns
+					.block-column
+						h2 Divinity's History
+						
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis.
 
-				p Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+						p Dolorum sit amet, consec tetuer adipiscing elit nean de commodo ligula eget dolor. Elit nean commodo ligula eget dolor aenean massa tellus eros cume sociis Theme natoque pen tibus et magnis augue. Aenea sum ligula eget.
+					.block-column
+						+accordion({
+							'accLvl1': [
+								{
+									'accName': 'schoolMission',
+									'accLabel': 'School\'s Mission',
+									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+								},
+								{
+									'accName': 'schoolVision',
+									'accLabel': 'School\'s Vision',
+									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+								},
+								{
+									'accName': 'schoolValue',
+									'accLabel': 'School\'s Core Values',
+									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+								}
+							]
+						})
+	
+	section.content-wrap
+		.container
+			+post-content()
+				.block-columns
+					.block-column
+
+					.block-column
+						h2 Principal's Message
+						
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
