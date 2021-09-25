@@ -1,0 +1,38 @@
+extends ../_layouts/base
+
+include ../_modules/molecules/page-banner/page-banner
+include ../_modules/molecules/post-content/post-content
+
+block config
+	//- Correct base url pathing for this page
+	- var baseUrl = '../'
+	- isHome = false
+	- var pageTitle = 'Classes'
+	- var page = 'classes'
+	- var site = htmlWebpackPlugin.options //global site data
+
+block content
+	+page-banner({
+		'img': '/wp-content/themes/divinity/assets/images/about-title-img.jpg',
+		'title': 'Classes',
+		'breadcrumb': {
+			'level1': 'Classes'
+		}
+	})
+
+	section.content-wrap 
+		.container
+			+post-content()
+				.block-columns.align-center
+					.block-column
+						h2 What sets us apart...
+						
+						p Divinity is not set up to generate profits while nurturing and educating children regardless of their disability/disorder.  
+						
+						p Divinity’s only hope, and wish is to give these children their rightful dignity as children first before their learning difficulties or differences. 
+
+						p.h7.pink We make a living by what we get, but we make a life by what we give.
+
+					.block-column
+						figure.block-image.wp-block-image.size-large
+							img.wp-image-19(loading='lazy' width='800' height='500' src='/wp-content/themes/divinity/assets/images/h1-single-img-1.png' alt='Sample Image')

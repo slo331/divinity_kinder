@@ -15,10 +15,10 @@ mixin testimonials(spec)
                   .quote-wrap 
                     .quote-icon.open
                       i.icon.icon-quote-open
-                    .quote-text
-                      p= text.quoute
+                    .quote-text(data-testimonial=text.quote)!= text.quote
                     .quote-icon.close
                       i.icon.icon-quote-close
+                  button.btn.btn-readmore read more
         
         .carousel-dots
     

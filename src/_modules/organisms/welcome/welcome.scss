@@ -2,7 +2,7 @@
 .welcome {
   $p: &;
   display: block;
-  background: url('/assets/images/welcome_bg@4x.png') no-repeat;
+  background: url('/wp-content/themes/divinity/assets/images/welcome_bg@4x.png') no-repeat;
   background-size: cover;
   // padding: 5rem 0;
 
@@ -18,7 +18,7 @@
     #{$p}-img {
       position: absolute;
       width: 100px;
-      opacity: 0.4;
+      opacity: 0.7;
 
       @include desktop {
         width: 120px;
@@ -76,7 +76,7 @@
       }
   
       .desc {
-        font-weight: $semibold;
+        font-weight: $normal;
         font-size: calc-em(20px);
         color: $white;
         line-height: 1.3;

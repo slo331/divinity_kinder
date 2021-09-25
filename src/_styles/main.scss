@@ -25,9 +25,10 @@ html {
 
 body {
   font-family: $primaryFont;
+  font-weight: $light;
   margin: 0;
   padding: 0;
-  color: $grey1;
+  color: $grey2;
   line-height: $base-lineheight;
 
   &.fixed {
@@ -44,6 +45,7 @@ body {
     font-family: $secondaryFont;
     margin: 0;
     line-height: 1;
+    color: $blue;
   }
 
   h1 {
@@ -63,10 +65,10 @@ body {
   }
 
   h3 {
-    font-size: calc-em(28px);
+    font-size: calc-em(24px);
 
     @include desktop {
-      font-size: calc-em(38px);
+      font-size: calc-em(32px);
     }
   }
 
@@ -80,6 +82,7 @@ body {
 
   p {
     font-size: calc-em(18px);
+    margin: 1rem 0;
   }
   
   header {
@@ -91,11 +94,11 @@ body {
 
   main {
     .content-wrap {
-      padding: 2rem 0;
+      // padding: 2rem 0;
 
-      @include desktop {
-        padding: 4rem 0;
-      }
+      // @include desktop {
+      //   padding: 4rem 0;
+      // }
 
       &.bg-pink {
         background: $lightPink;
@@ -107,6 +110,53 @@ body {
 
       &.bg-blue {
         background: $lightBlue;
+      }
+
+      .elementor-section-wrap {
+        & > .elementor-section {
+          padding: 2rem 0;
+
+          @include desktop {
+            padding: 4rem 0;
+          }
+
+          .elementor-container {
+            .elementor-container {
+              padding: 0;
+    
+              .elementor-widget-wrap,
+              .elementor-element-populated {
+                padding: 0;
+
+                .elementor-widget-container {
+                  p {
+                    margin: 1rem 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .site-footer {
+      .links {
+        .menu-item {
+          font-size: calc-em(15px);
+          font-weight: $light;
+          margin: 10px 0;
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $pink
+            }
+          }
+        }
       }
     }
   }
@@ -121,6 +171,7 @@ body {
 @import "../_modules/molecules/post-content/post-content";
 @import "../_modules/molecules/accordion/accordion";
 @import "../_modules/molecules/scroll-top/scroll-top";
+@import "../_modules/molecules/modal/modal";
 @import "../_modules/organisms/site-header/site-header";
 @import "../_modules/organisms/carousel-banner/carousel-banner";
 @import "../_modules/organisms/welcome/welcome";

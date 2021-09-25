@@ -18,17 +18,24 @@
 
       li {
         display: inline-block;
-        margin: 0 5px 0 0;
-        font-family: $secondaryFont;
+        margin: 0 5px 0;
         font-size: calc-em(16px);
-        font-weight: $semibold;
+        font-weight: $normal;
+
+        &:first-child {
+          margin: 0 5px 0 0;
+        }
+
+        &:last-child {
+          margin: 0 0 0 5px;
+        }
 
         @include desktop {
-          font-size: calc-em(18px);
+          font-size: calc-em(15px);
         }
 
         span {
-          font-weight: $bold;
+          font-weight: $normal;
           color: $grey2;
         }
 
@@ -41,18 +48,18 @@
           }
         }
 
-        &:after {
-          display: inline-block;
-          content: '/';
-          margin: 0 0 0 8px;
-          color: $grey2;
-        }
+        // &:after {
+        //   display: inline-block;
+        //   content: '/';
+        //   margin: 0 0 0 8px;
+        //   color: $grey2;
+        // }
 
-        &:last-child {
-          &:after {
-            display: none;
-          }
-        }
+        // &:last-child {
+        //   &:after {
+        //     display: none;
+        //   }
+        // }
       }
     }
   }

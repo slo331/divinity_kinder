@@ -4,7 +4,9 @@
     "author": "Stephen Orioste",
     "jsPreprocessor": "ES6(using babel)",
     "pages": [
-      "about-us"
+      "about-us",
+      "classes",
+      "classes"
     ]
   }
 }

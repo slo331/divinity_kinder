@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sxn6jd');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sxn6jd#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sxn6jd') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sxn6jd') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sxn6jd##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vkc46f');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vkc46f#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vkc46f') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vkc46f') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vkc46f##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -67,9 +67,14 @@
     content: $icon-long-arrow; 
   }
 }
-.icon-whatsapp {
+.icon-close {
   &:before {
-    content: $icon-whatsapp; 
+    content: $icon-close; 
+  }
+}
+.icon-whatsapp2 {
+  &:before {
+    content: $icon-whatsapp2; 
   }
 }
 .icon-facebook {
@@ -77,14 +82,39 @@
     content: $icon-facebook; 
   }
 }
-.icon-wa-circle {
+.icon-linkedin {
   &:before {
-    content: $icon-wa-circle; 
+    content: $icon-linkedin; 
   }
 }
-.icon-em-circle {
+.icon-twitter {
   &:before {
-    content: $icon-em-circle; 
+    content: $icon-twitter; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-pinterest {
+  &:before {
+    content: $icon-pinterest; 
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
+.icon-email2 {
+  &:before {
+    content: $icon-email2; 
   }
 }
 .icon-fb-circle {

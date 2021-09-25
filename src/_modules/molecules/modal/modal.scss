@@ -1,0 +1,192 @@
+//modal styles
+$animation-duration: .3s;
+
+$popup: (
+	z-index: 10000
+);
+
+@keyframes showpopup {
+	0% {
+		transform: scale(.5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes hidepopup {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.5);
+		opacity: 0;
+	}
+}
+
+.modal {
+	$p: &;
+	
+	$classes: (
+		root: #{&},
+		visible: #{&}--visible,
+	);
+	
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: map-get($popup, z-index);
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	transition: visibility 0ms linear #{$animation-duration};
+
+	@at-root #{map-get($classes, visible)} {
+		visibility: visible;
+		transition: visibility 0ms;
+	}
+
+	&-overlay {
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.7);
+		position: absolute;
+		z-index: map-get($popup, z-index);
+		opacity: 0;
+		transition: opacity #{$animation-duration} ease-in-out;
+
+		#{map-get($classes, visible)} & {
+			opacity: 1;
+		}
+	}
+
+	&-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		z-index: #{map-get($popup, z-index) + 1};		
+
+		#{$p}-container {
+			width: 90%;
+      height: auto;
+			background: $white;
+			position: relative;
+			box-shadow: 0 0 10px 2px rgba(0,0,0,.3);
+      padding: 2em 1em;
+			
+			animation: hidepopup #{$animation-duration} forwards;
+
+			#{map-get($classes, visible)} & {
+				animation: showpopup #{$animation-duration} forwards;
+			}
+			
+			@include desktop {
+				width: 65%;
+				height: auto;
+				min-width: 65%;
+				max-width: 65%;
+				max-height: 95%;
+        padding: 2em 5em 2em;
+			}
+
+			@include lgDesktop {
+				min-width: 50%;
+				max-width: 50%;
+				max-height: 95%;
+			}
+
+			.btn--modal_close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 3;
+        border: none;
+        padding: 0;
+        font-size: calc-em(28px);
+        line-height: 0;
+
+        &:hover {
+          background: transparent;
+          color: $purple;
+        }
+			}
+
+      #{$p}-head {
+        width: 100%;
+				height: auto;
+				padding: 30px;
+        overflow-y: auto;
+        position: relative;
+        
+        .title {
+          font-size: calc-em(22px);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+			#{$p}-body {
+				width: 100%;
+				height: auto;
+				max-height: 500px;
+        overflow-y: auto;
+        position: relative;
+
+        @include desktop {
+          height: auto;
+          max-height: 400px;
+        }
+        
+        .desc {
+          width: 100%;
+          text-align: center;
+          color: $grey2;
+        }
+
+				&::-webkit-scrollbar-track {
+					box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+					border-radius: 10px;
+					background-color: $white;
+					opacity: 0.6;
+				}
+
+				&::-webkit-scrollbar {
+					width: 12px;
+					background-color: $white;
+					opacity: 0.8;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-radius: 10px;
+					background-color: $grey2;
+					opacity: 0.4;
+					transition: all .2s ease-in-out;
+
+					&:hover {
+						opacity: 0.8;
+						background-color:  $grey2;
+					}
+				}
+			}
+
+      #{$p}-footer {
+        width: 100%;
+				height: auto;
+				padding: 30px;
+        overflow-y: auto;
+        position: relative;
+      }
+		}
+	}
+}

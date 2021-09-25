@@ -1,3 +1,4 @@
+include ../_modules/molecules/modal/modal
 include ../_modules/organisms/site-header/site-header
 include ../_modules/organisms/site-footer/site-footer
 
@@ -26,23 +27,27 @@ head
 	meta(name='description' content='Providing early intervention services which would enable special needs children to progressively graduate towards joining mainstream education schools')
 	link(rel='icon' type='image/png' href='/favicon.ico')
 	block stylesheets
-		link(rel='stylesheet', href='/assets/styles/main.css')
+		link(rel='stylesheet', href='/wp-content/themes/divinity/assets/styles/main.css')
 
 body
 	<!--[if lt IE 9]>
 	<p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+	<![endif]--> 
 
-	header
-		+site-header()
+	#page-wrap
+		header
+			#page-header
+				+site-header()
 
-	main.main-content
-		block content
+		main.main-content
+			block content
 
-	footer
-		+site-footer()
+		footer
+			+site-footer()
+		
+		+modal()
 
 	block scripts
-		script(src='/assets/scripts/main.js')
+		script(src='/wp-content/themes/divinity/assets/scripts/main.js')
 
 </html>

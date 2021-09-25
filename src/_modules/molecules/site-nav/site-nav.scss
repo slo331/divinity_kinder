@@ -109,7 +109,7 @@
             align-items: center;  
           }
 
-          &-item {
+          &-item, .menu-item {
             display: block;
             position: relative;
             width: auto;
@@ -133,7 +133,7 @@
               }
             }
 
-            &.active {
+            &.active, &.current_page_item {
               a {
                 color: $white;
 
@@ -164,7 +164,7 @@
               }
             }
 
-            &:hover, &.active {
+            &:hover, &.active, &.current_page_item {
               &:after {
                 width: 100%;
               }

@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'Baloo';
-	src: url('/assets/fonts/baloo.eot');
-	src: url('/assets/fonts/baloo.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/baloo.woff2') format('woff2'),
-			 url('/assets/fonts/baloo.woff') format('woff'),
-			 url('/assets/fonts/baloo.ttf') format('truetype'),
-			 url('/assets/fonts/baloo.svg#baloo_2extrabold') format('svg');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloo.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloo.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloo.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloo.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloo.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloo.svg#baloo_2extrabold') format('svg');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
@@ -13,12 +13,12 @@
 
 @font-face {
 	font-family: 'Baloo';
-	src: url('/assets/fonts/baloosemibold.eot');
-	src: url('/assets/fonts/baloosemibold.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/baloosemibold.woff2') format('woff2'),
-			 url('/assets/fonts/baloosemibold.woff') format('woff'),
-			 url('/assets/fonts/baloosemibold.ttf') format('truetype'),
-			 url('/assets/fonts/baloosemibold.svg#baloo_2extrabold') format('svg');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloosemibold.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloosemibold.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloosemibold.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloosemibold.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloosemibold.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloosemibold.svg#baloo_2extrabold') format('svg');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -26,91 +26,143 @@
 
 @font-face {
 	font-family: 'Baloo';
-	src: url('/assets/fonts/baloobold.eot');
-	src: url('/assets/fonts/baloobold.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/baloobold.woff2') format('woff2'),
-			 url('/assets/fonts/baloobold.woff') format('woff'),
-			 url('/assets/fonts/baloobold.ttf') format('truetype'),
-			 url('/assets/fonts/baloobold.svg#baloo_2extrabold') format('svg');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloobold.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/baloobold.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloobold.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloobold.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloobold.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/baloobold.svg#baloo_2extrabold') format('svg');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-regular.eot');
-	src: url('/assets/fonts/nunito-regular.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-regular.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-regular.woff') format('woff'),
-			 url('/assets/fonts/nunito-regular.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-regular.svg#nunitoregular') format('svg');
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold.svg#metropolisbold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-bold-italic.svg#metropolisbold_italic') format('svg');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold.svg#metropolissemi_bold') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-semibold-italic.svg#metropolissemi_bold_italic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium.svg#metropolismedium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-medium-italic.svg#metropolismedium_italic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular.svg#metropolisregular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-regular-italic.svg#metropolislight_italic') format('svg');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-semibold.eot');
-	src: url('/assets/fonts/nunito-semibold.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-semibold.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-semibold.woff') format('woff'),
-			 url('/assets/fonts/nunito-semibold.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-semibold.svg#nunitosemibold') format('svg');
-	font-weight: 600;
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-light.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-light.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light.svg#metropolislight') format('svg');
+	font-weight: 200;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-bold.eot');
-	src: url('/assets/fonts/nunito-bold.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-bold.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-bold.woff') format('woff'),
-			 url('/assets/fonts/nunito-bold.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-bold.svg#nunitobold') format('svg');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-italic.eot');
-	src: url('/assets/fonts/nunito-italic.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-italic.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-italic.woff') format('woff'),
-			 url('/assets/fonts/nunito-italic.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-italic.svg#nunitoitalic') format('svg');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-semibolditalic.eot');
-	src: url('/assets/fonts/nunito-semibolditalic.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-semibolditalic.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-semibolditalic.woff') format('woff'),
-			 url('/assets/fonts/nunito-semibolditalic.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-semibolditalic.svg#nunitosemibold_italic') format('svg');
-	font-weight: 600;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Nunito';
-	src: url('/assets/fonts/nunito-bolditalic.eot');
-	src: url('/assets/fonts/nunito-bolditalic.eot?#iefix') format('embedded-opentype'),
-			 url('/assets/fonts/nunito-bolditalic.woff2') format('woff2'),
-			 url('/assets/fonts/nunito-bolditalic.woff') format('woff'),
-			 url('/assets/fonts/nunito-bolditalic.ttf') format('truetype'),
-			 url('/assets/fonts/nunito-bolditalic.svg#nunitobold_italic') format('svg');
-	font-weight: 700;
+	font-family: 'Metropolis';
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.eot');
+	src: url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.eot?#iefix') format('embedded-opentype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.woff2') format('woff2'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.woff') format('woff'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.ttf') format('truetype'),
+			 url('/wp-content/themes/divinity/assets/fonts/metropolis-light-italic.svg#metropolislight_italic') format('svg');
+	font-weight: 200;
 	font-style: italic;
 	font-display: swap;
 }

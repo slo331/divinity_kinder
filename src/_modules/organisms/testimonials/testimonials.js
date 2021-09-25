@@ -13,6 +13,23 @@ export default class Testimonials {
     let $arrows = $('.carousel-arrows', $carouselWrap);
     let $prev = $('.prev', $arrows);
     let $next = $('.next', $arrows)
+    let $readmore = $('.btn-readmore', $carousel);
+
+    this.$modal = $('.modal');
+
+    $carousel.on('init', (event, slick) => {
+      $readmore.map((i,el) => {
+        let $el = $(el);
+        let $qText = $el.siblings('.quote-wrap').find('.quote-text');
+        let $text = $qText.data('testimonial');
+
+        $el.on('click', e => {
+          e.preventDefault();
+          this._showModal($text);
+          // console.log($text);
+        })
+      })
+    });
 
     $carousel.slick({
       speed: 800,
@@ -32,4 +49,19 @@ export default class Testimonials {
       nextArrow: $next
     });
   }
+
+  _showModal($text) {
+		let $init = () => {
+      $('body').toggleClass('fixed');
+      this.$modal.toggleClass('modal--visible modal-testimonials');
+      this.$modal.find('.modal-head').empty();
+      this.$modal.find('.modal-body').empty();
+    };
+
+    $.when($init())
+    .done(() => {
+      let $msg = `<div class="quote-wrap"><div class="quote-icon open"><i class="icon icon-quote-open"></i></div><div class="quote-text">${$text}</div><div class="quote-icon close"><i class="icon icon-quote-close"></i></div></div>`;
+      this.$modal.find('.modal-body').html($msg);
+    });
+	}
 }

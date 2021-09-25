@@ -15,7 +15,7 @@ mixin site-nav(spec)
 			.nav-links__wrap
 				ul.links
 					each item, index in spec.navs
-						li.links-item(class=(page === item.page ? 'active' : ''))
+						li.menu-item.links-item(class=(page === item.page ? 'active current_page_item' : ''))
 							a(href= item.url)= item.name
 		
 			+info-bar().mobile-only

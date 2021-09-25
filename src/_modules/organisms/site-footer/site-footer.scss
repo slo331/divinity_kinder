@@ -21,9 +21,14 @@
         &-logo {
           width: 175px;
           height: auto;
+          margin: 0 0 1.5rem 0; 
 
           @include desktop {
             width: 210px;
+          }
+
+          a {
+            display: block;
           }
 
           img {
@@ -34,8 +39,13 @@
 
         &-text {
           display: block;
-          font-size: calc-em(15px);
-          margin: 20px 0;
+          font-size: calc-em(14px);
+          margin: 0 0 25px;
+          color: $white;
+
+          & > * {
+            color: $white;
+          }
         }
 
         &-media {
@@ -58,32 +68,95 @@
               }
 
               .item {
-                background: $grey2;
-                padding: 13px;
+                // background: $grey2;
+                // padding: 13px;
                 border-radius: 50%;
                 line-height: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+                width: auto;
 
-                &.whatsapp {
-                  background: $whatsapp;
-                }
+                // &.whatsapp {
+                //   background: $whatsapp;
+                // }
 
-                &.facebook {
-                  background: $facebook;
-                }
+                // &.facebook {
+                //   background: $facebook;
+                // }
 
-                &.email {
-                  background: $pink;
-                }
+                // &.email {
+                //   background: $pink;
+                // }
 
                 &:hover {
-                  background: $peach;
+                  .icon {
+                    &.icon-linkedin, &.icon-twitter, &.icon-whatsapp, &.icon-youtube, &.icon-instagram, &.icon-pinterest, &.icon-facebook, &.icon-email2 {
+                      color: $peach;
+                    }
+                  }
                 }
 
                 .icon {
-                  font-size: calc-em(18px);
+                  font-size: calc-em(34px);
+                  position: relative;
+                  transition: all .3s ease-in-out;
+
+                  // &:hover {
+                  //   color: $peach;
+                  // }
+
+                  &.icon-linkedin {
+                    color: #0072b1;
+                  }
+                  
+                  &.icon-twitter {
+                    color: #1DA1F2;
+                  }
+
+                  &.icon-whatsapp {
+                    color: $whatsapp;
+                  }
+
+                  &.icon-youtube {
+                    color: #c4302b;
+                  }
+
+                  &.icon-instagram {
+                    color: #E1306C;
+                  }
+
+                  &.icon-pinterest {
+                    color: #E60023;
+                  }
+
+                  &.icon-facebook {
+                    color: $facebook;
+                  }
+
+                  &.icon-email2 {
+                    color: $pink;
+                  }
+
+                  &:before {
+                    z-index: 2;
+                    position: relative;
+                  }
+
+                  &:after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    top: 2px;
+                    left: 1px;
+                    background: $white;
+                    border-radius: 10rem;
+                    line-height: 1;
+                    z-index: 1;
+                  }
                 } 
               }
             }
@@ -100,9 +173,8 @@
         &-copyright {
           width: 100%;
           text-align: center;
-          font-size: calc-em(15px);
-          font-family: $secondaryFont;
-          font-weight: $semibold;
+          font-size: calc-em(13px);
+          font-weight: $light;
         }
       }
     }
@@ -159,7 +231,9 @@
           .title {
             margin: 0 0 1rem;
             font-family: $secondaryFont;
-            font-size: calc-em(30px);
+            font-weight: $bold;
+            font-size: calc-em(32px);
+            line-height: 1;
           }
 
           .links {
@@ -168,9 +242,9 @@
             padding: 0;
 
             .link-item {
-              font-family: $secondaryFont;
-              font-size: calc-em(16px);
-              font-weight: $semibold;
+              // font-family: $secondaryFont;
+              font-size: calc-em(15px);
+              font-weight: $light;
               margin: 10px 0;
 
               .icon {

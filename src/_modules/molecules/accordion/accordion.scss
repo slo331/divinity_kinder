@@ -3,7 +3,8 @@
   $p: &;
   padding: 5px 0;
 
-  &-list {
+  &-list,
+  .elementor-accordion {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -18,41 +19,68 @@
         }
       }
 
-      p {
-        margin: 0;
-      }
+      // p {
+      //   margin: 0;
+      // }
     }
 
-    #{$p}-item {
+    #{$p}-item,
+    .elementor-accordion-item {
       cursor: pointer;
-      margin: 0 0 10px 0;
+      margin: 0 0 8px 0;
+      border: none;
 
       &:last-child {
         margin: 0;
       }
 
-      &.is-open {
-        #{$p}-label {
-          background: $purple;
+      &.is-open,
+      &.elementor-active {
+        #{$p}-label,
+        &.elementor-tab-title {
+          background: $pink;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+
+        .elementor-accordion-icon {
+          transform: rotate(90deg);
+          transform-origin: center center;
         }
       }
 
-      #{$p}-label {
-        padding: 15px 20px;
-        background: $pink;
+      #{$p}-label,
+      .elementor-tab-title {
+        width: 100%;
+        padding: 15px 60px 15px 20px;
+        background: $pink2;
         color: $white;
         border-radius: 8px;
         display: flex;
         align-items: center;
         font-family: $secondaryFont;
         font-weight: $bold;
-        font-size: calc-em(20px);
+        font-size: calc-em(24px);
         line-height: 1;
         position: relative;
-        transition: all .2s ease-in-out;
+        transition: all .5s ease-in-out;
+
+        @include desktop {
+          font-size: calc-em(24px);
+        }
 
         p {
           margin: 0;
+          color: $white;
+        }
+
+        .elementor-accordion-icon {
+          display: block;
+          transition: all .5s ease-in-out;
+        }
+
+        .elementor-accordion-title {
+          width: 100%;
         }
 
         .icon {
@@ -60,7 +88,7 @@
           position: absolute;
           right: 15px;
           font-size: calc-em(18px);
-          transition: all .2s ease-in-out;
+          transition: all .5s ease-in-out;
 
           &.expand {
             transform: rotate(90deg);
@@ -68,9 +96,48 @@
         }
       }
 
-      #{$p}-content {
+      .elementor-tab-title {
+        padding: 15px 20px;
+
+        .elementor-accordion-icon {
+          width: auto;
+          transition: all .5s ease-in-out;
+        }
+
+        .elementor-accordion-icon-right {
+          order: 2;
+        }
+      }
+
+      #{$p}-content,
+      .elementor-tab-content {
         display: none;
-        padding: 5px 8px;
+        padding: 15px 20px;
+        background: $pink;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top: 2px dashed $lightPink;
+
+        p {
+          margin: 1rem 0;
+        }
+
+        & > * {
+          color: $white;
+        }
+      }
+    }
+
+    .elementor-active {
+      &.elementor-tab-title {
+        background: $pink;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .elementor-accordion-icon {
+        transform: rotate(90deg);
+        transform-origin: center center;
       }
     }
   }

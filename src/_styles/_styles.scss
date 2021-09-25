@@ -29,7 +29,8 @@ Layout
   @extend %clearfix;
 }
 
-.container {
+.container,
+.elementor-container {
   @extend %container;
   max-width: $bpDesktop;
 }
@@ -180,7 +181,8 @@ Layout
 }
 
 @media only screen and (min-width: $bpLgDesktop) {
-  .container {
+  .container,
+  .elementor-container {
     max-width: $bpLgDesktop;
   }
 

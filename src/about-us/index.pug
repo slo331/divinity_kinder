@@ -14,7 +14,7 @@ block config
 
 block content
 	+page-banner({
-		'img': '/assets/images/about-title-img.jpg',
+		'img': '/wp-content/themes/divinity/assets/images/about-title-img.jpg',
 		'title': 'About Us',
 		'breadcrumb': {
 			'level1': 'About Us'
@@ -24,8 +24,10 @@ block content
 	section.content-wrap 
 		.container
 			+post-content()
-				.block-columns
+				.block-columns.align-center
 					.block-column
+						figure.block-image.wp-block-image.size-large
+							img.wp-image-19(loading='lazy' width='800' height='500' src='/wp-content/themes/divinity/assets/images/h1-single-img-1.png' alt='Sample Image')
 
 					.block-column
 						h2 Engaging Learning Environment
@@ -40,26 +42,31 @@ block content
 					.block-column
 						h2 Divinity's History
 						
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis.
+						p Divinity Especial Needs Intervention Centre was founded on April 01, 2007 by Ms Margaret Nathen as a Sole Proprietorship, to provide Early Intervention services which would enable special needs children to progressively graduate towards joining mainstream education schools. 
+						
+						p We found that most times after a period of 3 months or so, these children regress, and exhibit compounding issues suffered from the lack of inclusivity in most mainstream schools, as well as the lack of passionate and creative teaching methodologies. 
+						
+						p Divinity then embarked on expanding our scope to include Preschool (N1/N2, K1/K2) in the hope of better preparing them to meet the challenges of mainstream primary/Pathlight schools. 
+						
+						p Now registered as Divinity Kindergarten Pte Ltd, our school enrolls children from age 15 months onwards.
 
-						p Dolorum sit amet, consec tetuer adipiscing elit nean de commodo ligula eget dolor. Elit nean commodo ligula eget dolor aenean massa tellus eros cume sociis Theme natoque pen tibus et magnis augue. Aenea sum ligula eget.
 					.block-column
 						+accordion({
 							'accLvl1': [
 								{
 									'accName': 'schoolMission',
-									'accLabel': 'School\'s Mission',
-									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+									'accLabel': 'Mission',
+									'accContent': '<p>Divinity strives to prepare all children to become lifelong learners and functionally responsible citizens; ready to meet the challenges of the future. In partnership with families and the community, our goal is to create relevant learning opportunities for our children both inside and outside the classroom that help them develop the knowledge, critical thinking, and character necessary to succeed in a technologically advanced world.</p>',
 								},
 								{
 									'accName': 'schoolVision',
-									'accLabel': 'School\'s Vision',
-									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+									'accLabel': 'Vision',
+									'accContent': '<p>A world where children with special needs and typically developing children are recognized by their abilities, not their disabilities, and learn together in high-quality, inclusive environments.</p>',
 								},
 								{
 									'accName': 'schoolValue',
-									'accLabel': 'School\'s Core Values',
-									'accContent': '<p>The Parenthood Provisional Housing Scheme (PPHS) provides rental flats at selected sites to first-timer married couples, who need interim housing to support their family needs while they wait for the completion of their new HDB flats.</p>',
+									'accLabel': 'Core Values',
+									'accContent': '<p>We believe that every child has a right to attend school and every child is a child first before his/her disability / disorder.</p><p>To provide a holistic approach to education cum therapy services to address the varying difference of children with special needs.</p>',
 								}
 							]
 						})
@@ -73,4 +80,36 @@ block content
 					.block-column
 						h2 Principal's Message
 						
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra facilisis. Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed feugiat. Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+						p In recent years we have started to notice a trend where our children who were transited to mainstream primary schools were not able to cope with mainstream academics mainly because of the lack of understanding, tolerance, and patience of mainstream schoolteachers.  
+						
+						p We totally understand such teachers' frustrations because they do not have the qualifications nor expertise in dealing with the 'not normal' behaviors of our children.  
+						
+						p Also, these teachers have perhaps a classroom of 30 and sometimes 40 children with a packed curriculum to complete for each semester.
+						
+						p These returning children to our school got us rethinking and relooking: 
+
+						ul
+							li 
+								p Are our services complete for such children?
+							li 
+								p Are there educational pathways for children struggling at primary levels?
+							li 
+								p Lacking in education, knowledge and understanding, will these children be able to deal with adulthood?
+							li 
+								p Do we ignore the issues they face during these formative primary education years?
+							li 
+								p Do we simply wait till they struggle through to adulthood before we address their issues?
+							li 
+								p Do we want to make a positive difference only during early intervention and preschool years, and subsequently leave them to their own defenses?
+								p We have come to a realization that:
+							li 
+								p We have to fill that gap and provide for lifelong learning to all our young charges.
+							li 
+								p We have to provide for a continuity of education at least till they reach secondary education level or higher.
+							li 
+								p We want to give them a school where there is a continued assessment of their progress, their abilities, their learning difficulties, and learning differences.
+							li 
+								p We need to grow towards more inclusivity (children with and without special needs); as we educate our children to become full-fledged, full-functioning adults who will contribute positively both in the community and as part of the nation.
+							li 
+								p We have to therefore endeavor to give our children equal opportunities to receive the same education as all other children in regular schools, so that "no child is left behind".
+

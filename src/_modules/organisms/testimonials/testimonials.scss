@@ -2,7 +2,7 @@
 .testimonials {
   $p: &;
   padding: 5rem 0;
-  background: url('/assets/images/testimonial_bg@4x.png') no-repeat;
+  background: url('/wp-content/themes/divinity/assets/images/testimonial_bg@4x.png') no-repeat;
   background-size: cover;
 
   &-header {
@@ -14,7 +14,7 @@
       font-size: calc-em(30px);
       font-weight: $bold;
       line-height: 1.1;
-      color: $grey2;
+      color: $blue;
       text-align: center;
 
       @include desktop {
@@ -45,6 +45,9 @@
 
             &__wrap {
               .carousel-text {
+                display: block;
+                text-align: center;
+
                 .quote {
                   &-wrap {
                     position: relative;
@@ -54,19 +57,27 @@
                       z-index: -1;
 
                       &.open {
-                        top: -5px;
-                        left: -20px;
+                        top: -20px;
+                        left: 0px;
+
+                        @include desktop {
+                          left: -30px;
+                        }
                       }
 
                       &.close {
-                        bottom: -5px;
-                        right: -20px;
+                        bottom: -15px;
+                        right: 0px;
+
+                        @include desktop {
+                          right: -30px;
+                        }
                       }
 
                       .icon {
-                        color: $red;
-                        opacity: 0.3;
-                        font-size: calc-em(50px);
+                        color: $lightPink;
+                        opacity: 0.5;
+                        font-size: calc-em(60px);
                       }
                     }
 
@@ -75,12 +86,33 @@
                         text-align: center;
                         font-style: italic;
                         font-size: calc-em(16px);
+                        color: $grey2;
 
                         @include desktop {
                           font-size: calc-em(18px);
                         }
                       }
                     }
+                  }
+                }
+
+                .btn-readmore {
+                  margin: 0 0 1rem;
+                  font-size: calc-em(18px);
+                  font-weight: $normal;
+                  line-height: 1;
+                  color: $white;
+                  background: $pink;
+                  border: 1px solid $pink;
+                  border-radius: 6px;
+                  cursor: pointer;
+                  transition: all .2s ease-in-out;
+
+                  &:hover,
+                  &:focus {
+                    outline: none;
+                    background: $red;
+                    border: 1px solid $red;
                   }
                 }
               }
@@ -192,6 +224,66 @@
             right: 40px;
           }
         }
+      }
+    }
+  }
+}
+
+//modal quotes styles
+.quote {
+  &-wrap {
+    position: relative;
+    
+    .quote-icon {
+      position: absolute;
+      z-index: -1;
+
+      &.open {
+        top: -20px;
+        left: 0px;
+
+        @include desktop {
+          left: 0px;
+        }
+      }
+
+      &.close {
+        bottom: -15px;
+        right: 0px;
+
+        @include desktop {
+          right: 0px;
+        }
+      }
+
+      .icon {
+        color: $lightPink;
+        opacity: 0.5;
+        font-size: calc-em(60px);
+      }
+    }
+
+    .quote-text {
+      p {
+        text-align: center;
+        font-style: italic;
+        font-size: calc-em(16px);
+        color: $grey2;
+
+        @include desktop {
+          font-size: calc-em(18px);
+        }
+      }
+    }
+  }
+}
+
+.modal-testimonials {
+  .modal-wrap {
+    .modal-container {
+      .modal-head,
+      .modal-footer {
+        padding: 20px;
       }
     }
   }

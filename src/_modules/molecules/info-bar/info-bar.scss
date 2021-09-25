@@ -29,13 +29,13 @@
         }
 
         .icon {
-          font-size: calc-em(16px);
+          font-size: calc-em(18px);
           margin: 0 8px 0 0;
         }
 
         .desc {
           font-size: calc-em(14px);
-          font-weight: $bold;
+          font-weight: $normal;
           line-height: 1;
         }
       }
@@ -58,9 +58,10 @@
 
           a {
             line-height: 1;
+            display: block;
 
             .icon {
-              font-size: calc-em(22px);
+              font-size: calc-em(26px);
             }
           }
         }
@@ -72,7 +73,7 @@
     color: $white;
 
     &:hover {
-      color: $purple2;
+      color: $lightPink;
     }
   }
 }

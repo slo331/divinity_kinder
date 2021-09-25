@@ -15,6 +15,17 @@
     }
   }
 
+  a {
+    &:hover {
+      .cta-link {
+        span {
+          color: $pink;
+        }
+      }
+      color: $pink;
+    }
+  }
+
   &-img {
     position: relative;
     width: 100%;
@@ -115,16 +126,13 @@
       }
 
       .cta-link {
-        a {
+        span {
           color: $white;
           font-weight: $bold;
           font-size: calc-em(18px);
           display: inline-flex;
           align-items: center;
-
-          &:hover {
-            color: $pink;
-          }
+          transition: all .3s ease-in-out;
 
           .icon {
             display: inline-block;

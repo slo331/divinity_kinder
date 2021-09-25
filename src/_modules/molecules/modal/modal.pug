@@ -1,0 +1,19 @@
+include ../../atoms/button/button
+
+mixin modal(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+
+	.modal(class=spec.__class)&attributes(attributes)
+		.modal-overlay
+		.modal-wrap
+			.modal-container
+				+button({
+					'__text': '',
+					'__type': 'button',
+					'__class': 'btn--modal_close close',
+					'__iconBefore': 'icon-close'
+				})
+				.modal-head
+				.modal-body
+				.modal-footer

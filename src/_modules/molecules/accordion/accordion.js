@@ -6,39 +6,53 @@ export default class Accordion {
   constructor() {
     let $accordion = $('.accordion');
     let $accItem = $('.accordion-item', $accordion)
-    let $accLabel = $('.label-title', $accItem);
+    let $label = $('.label-title', $accItem);
+    let $accContent = $('.content-wrap', $accItem);
+    let $iconMain = $('.icon', $label);
 
-    $accLabel.map((i,el) => {
+    $accItem.map((i,el) => {
       let $el = $(el);
+      let $accLabel = $('.label-title', $el);
+      let $content = $('.content-wrap', $el);
+      let $icon = $el.find('.icon');
+
+      let $slideUp = () => {
+        $content.slideUp('slow');
+        $icon.removeClass('expand');
+      }
+
+      let $slideDown = () => {
+        $icon.addClass('expand');
+        $el.addClass('is-open');
+      }
       
-      $el.on('click', () => {
-        let $parent = $el.parent('.accordion-parent');
-        let $accContent = $el.siblings('.content-wrap');
-        let $icon = $el.find('.icon');
+      if(i == 0) {
+        $.when($slideDown())
+        .done(() => {
+          setTimeout(() => {
+            $content.slideDown('slow');
+          }, 250);
+        });
+      }
 
-        // $('.content-wrap', '.accordion').slideUp('slow');
-        // $('.icon', '.accordion').removeClass('expand');
-        // $accItem.removeClass('is-open');
-
-        let $slideUp = () => {
-          $accContent.slideUp('slow');
-          $icon.removeClass('expand');
-        }
-
-        let $slideDown = () => {
-          $icon.addClass('expand');
-          $accContent.slideDown('slow');
-        }
-      
-        if ($parent.hasClass('is-open')) {
+      $accLabel.on('click', () => {
+        if ($el.hasClass('is-open')) {
           $.when($slideUp())
           .done(() => {
-            $parent.removeClass('is-open');
+            setTimeout(() => {
+              $el.removeClass('is-open');
+            }, 250);
           });
         } else {
+          $iconMain.removeClass('expand');
+          $accItem.removeClass('is-open');
+          $accContent.slideUp('slow');
+
           $.when($slideDown())
           .done(() => {
-            $parent.addClass('is-open');
+            setTimeout(() => {
+              $content.slideDown('slow');
+            }, 250);
           });
         }
       });

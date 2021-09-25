@@ -7,6 +7,7 @@ import $ from 'jquery';
 import SiteNav from '../_modules/molecules/site-nav/site-nav';
 import ScrollTop from '../_modules/molecules/scroll-top/scroll-top';
 import Accordion from '../_modules/molecules/accordion/accordion';
+import Modal from '../_modules/molecules/modal/modal';
 import CarouselBanner from '../_modules/organisms/carousel-banner/carousel-banner';
 import Testimonials from '../_modules/organisms/testimonials/testimonials';
 
@@ -37,6 +38,10 @@ $(() => {
 
   if($('.accordion').length) {
     new Accordion();
+  }
+
+  if($('.modal').length) {
+    new Modal();
   }
 });
 

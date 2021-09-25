@@ -71,9 +71,10 @@
         }
 
         .title {
-          font-size: calc-em(42px);
+          font-size: calc-em(44px);
           font-weight: $heavy;
           font-family: $secondaryFont;
+          color: $blue;
           margin: 0;
           line-height: 100%;
 
@@ -84,7 +85,6 @@
 
         .subtitle {
           font-size: calc-em(16px);
-          font-weight: $bold;
           margin: 0;
           line-height: 1.1;
 
